@@ -83,3 +83,8 @@
     @apply font-bold text-4xl md:text-5xl text-center;
   }
 }
+.doba-img {
+  background: url(../public/dobaz.png);
+  background-position: center;
+  height: 90vh;
+}
