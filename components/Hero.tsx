@@ -5,12 +5,16 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const Hero = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/Ahmed Jamal Hussien.pdf";
+    link.download = "Ahmed-Jamal-CV.pdf"; // غير الاسم حسب رغبتك
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <div className="pb-20 pt-36">
-      {/**
-       *  UI: Spotlights
-       *  Link: https://ui.aceternity.com/components/spotlight
-       */}
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -62,9 +66,10 @@ const Hero = () => {
 
           <a href="#about">
             <MagicButton
-              title="Show my work"
+              title="Download My CV"
               icon={<FaLocationArrow />}
               position="right"
+              handleClick={handleDownload}
             />
           </a>
         </div>

@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const RecentProjects = () => {
   return (
-    <div className="py-20">
+    <div className="py-20" id="projects">
       <h1 className="heading">
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
@@ -66,12 +66,16 @@ const RecentProjects = () => {
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <Link
-                    href={item.link}
-                    className="flex lg:text-xl md:text-xs text-sm text-purple"
-                  >
-                    Check Live Site
-                  </Link>
+                  {(item.link || item.githublink) && (
+                    <Link
+                      href={item.link ? item.link : item.githublink}
+                      className="flex lg:text-xl md:text-xs text-sm text-purple"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item.link ? "Check Live Site" : "Check GitHub Repo"}
+                    </Link>
+                  )}
                   <FaLocationArrow className="ms-3" color="#CBACF9" />
                 </div>
               </div>

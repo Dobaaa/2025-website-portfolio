@@ -76,7 +76,8 @@ export const projects = [
     des: "Developing a full stack responsive booking reservation web App that Used for book workers it was a big project had a lot of pages and logics and it had fine details",
     img: "/p1.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://dobaaa.github.io/pizzaa-website/",
+    link: "",
+    githublink: "https://github.com/Dobaaa/Saboba-App",
   },
   {
     id: 2,
@@ -84,7 +85,8 @@ export const projects = [
     des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
     img: "/p7.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://dobaaa.github.io/pizzaa-website/",
+    link: "",
+    githublink: "https://github.com/Dobaaa/3s-system",
   },
   {
     id: 3,
@@ -93,6 +95,7 @@ export const projects = [
     img: "/p2.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://dobaaa.github.io/pizzaa-website/",
+    githublink: "",
   },
   {
     id: 4,
@@ -100,7 +103,8 @@ export const projects = [
     des: "A full-stack web application for managing and visualizing quarterly sales data with interactive 3D charts. Built with React.js, Three.js, Laravel, and MySQL.",
     img: "/p4.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/Dobaaa/AALLIE-TASK",
+    link: "",
+    githublink: "https://github.com/Dobaaa/AALLIE-TASK",
   },
   {
     id: 5,
@@ -109,30 +113,61 @@ export const projects = [
     img: "/p6.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://wlistdb.com/en",
+    githublink: "",
   },
   {
     id: 6,
     title: "POS System",
-    des: "A full-stack web application for managing and visualizing quarterly sales data with interactive 3D charts. Built with React.js, Three.js, Laravel, and MySQL.",
-    img: "/p4.png",
+    des: "Developed a system for managing parties, concerts, and events developed the rental page and party features page and suppliers page andproducts page.",
+    img: "/pos.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/Dobaaa/AALLIE-TASK",
+    link: "",
+    githublink: "https://github.com/Dobaaa/pos-",
   },
   {
     id: 7,
-    title: "Sales Data Visualization Dashboard",
-    des: "A full-stack web application for managing and visualizing quarterly sales data with interactive 3D charts. Built with React.js, Three.js, Laravel, and MySQL.",
-    img: "/p4.png",
+    title: "Solar Wevsite",
+    des: "Figma design that we would like to convert into an actual responsive website.",
+    img: "/p5.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/Dobaaa/AALLIE-TASK",
+    link: "https://www.skyline-power.com/",
+    githublink: "",
   },
   {
     id: 8,
-    title: "Sales Data Visualization Dashboard",
+    title: "islam education",
+    des: "Developed a system for managing parties, concerts, and events developed the rental page and party features page and suppliers page andproducts page.",
+    img: "/islam.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "",
+    githublink: "https://github.com/Dobaaa/Nextjs-ISLAM",
+  },
+  {
+    id: 9,
+    title: "Ventage Website",
     des: "A full-stack web application for managing and visualizing quarterly sales data with interactive 3D charts. Built with React.js, Three.js, Laravel, and MySQL.",
-    img: "/p4.png",
+    img: "/p8.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://github.com/Dobaaa/AALLIE-TASK",
+    githublink: "",
+  },
+  {
+    id: 10,
+    title: " awsgulf  company",
+    des: "A full-stack web application for managing and visualizing quarterly sales data with interactive 3D charts. Built with React.js, Three.js, Laravel, and MySQL.",
+    img: "/p9.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "https://awsgulf.netlify.app/",
+    githublink: "",
+  },
+  {
+    id: 11,
+    title: " 3d Portfolio ",
+    des: "personal website version by react Js and Three js and Tailwind CSS.",
+    img: "/p9.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "https://dobazworld.netlify.app/",
+    githublink: "",
   },
 ];
 
@@ -141,30 +176,35 @@ export const testimonials = [
     quote:
       "Ahmed did excellent work. He has good communication skills and very responsive. Would definitely hire him again.",
     name: "Murat Gultepe",
+    c_img: "/upwork.png",
     title: "Director of Solar Company",
   },
   {
     quote:
       "Collaborating with Ahmed J was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project Ahmed's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Softa Solutions Company ",
+    c_img: "/softa.jpg",
     title: "CEO of Softa Solutions Company",
   },
   {
     quote:
       "Working with Ahmed  was a seamless experience. His attention to detail, creative approach, and ability to communicate effectively made the entire process smooth and enjoyable .Ahmed brings passion and technical brilliance to every project. Highly recommended for anyone aiming to build a modern, high-performing website.",
     name: "Muhammed Hussien ",
+    c_img: "/upwork.png",
     title: "Head of Digital Strategy at Nova Solutions",
   },
   {
     quote:
       "Collaborating with Lina on our front-end revamp was a fantastic experience. Her mastery of modern frameworks, eye for UI/UX detail, and ability to translate designs into seamless, responsive interfaces truly elevated our product. If you're looking for a front-end developer who combines technical skill with design sensitivity, Lina is the one",
     name: "Omar El-Masry",
+    c_img: "/freelancer.jpeg",
     title: "Lead Product Manager at BrightLoop Studios",
   },
   {
     quote:
       "I had the pleasure of partnering with Ahmed  on a recent project, and I was genuinely impressed by his commitment and technical know-how. Ahmed consistently delivered beyond expectations and brought fresh, strategic thinking to the table. He's an excellent choice if you're looking to enhance your online presence.",
     name: "Daniel Monroe",
+    c_img: "/freelancer.jpeg",
     title: "Marketing Director at PixelWave Medias",
   },
 ];
@@ -241,8 +281,8 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: "/twit.svg",
-    link: "https://github.com/Dobaaa",
+    img: "/www.png",
+    link: "https://wa.me/201211998934",
   },
   {
     id: 3,
