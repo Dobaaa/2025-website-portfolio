@@ -2,9 +2,8 @@ import { withSentryConfig } from "@sentry/nextjs";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // ← ضروري علشان next export
   images: {
-    unoptimized: true, // ← مهم لو بتستخدم <Image> من next/image
+    unoptimized: true,
   },
 };
 
