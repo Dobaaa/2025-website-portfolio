@@ -19,8 +19,8 @@ const RecentProjects = () => {
             key={item.id}
           >
             <PinContainer
-              title={item.link}
-              href="https://twitter.com/mannupaaji"
+              title={item.link || item.githublink}
+              href="https://upwork.com/freelancers/ahmedj100"
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
@@ -73,7 +73,11 @@ const RecentProjects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {item.link ? "Check Live Site" : "Check GitHub Repo"}
+                      {item.link
+                        ? "Check Live Site"
+                        : item.githublink
+                        ? "Check GitHub Repo"
+                        : "Under Modification"}
                     </Link>
                   )}
                   <FaLocationArrow className="ms-3" color="#CBACF9" />

@@ -129,7 +129,7 @@ export const projects = [
     title: "Solar Wevsite",
     des: "Figma design that we would like to convert into an actual responsive website.",
     img: "/p5.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    iconLists: ["/next.svg", "/CSS3.png", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://www.skyline-power.com/",
     githublink: "",
   },
@@ -147,8 +147,14 @@ export const projects = [
     title: "Ventage Website",
     des: "A full-stack web application for managing and visualizing quarterly sales data with interactive 3D charts. Built with React.js, Three.js, Laravel, and MySQL.",
     img: "/p8.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/Dobaaa/AALLIE-TASK",
+    iconLists: [
+      "/next.svg",
+      "/tail.svg",
+      "/javascript.svg",
+      "/three.svg",
+      "/gsap.svg",
+    ],
+    link: "",
     githublink: "",
   },
   {
@@ -156,7 +162,13 @@ export const projects = [
     title: " awsgulf  company",
     des: "A full-stack web application for managing and visualizing quarterly sales data with interactive 3D charts. Built with React.js, Three.js, Laravel, and MySQL.",
     img: "/p9.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    iconLists: [
+      "/next.svg",
+      "/tail.svg",
+      "/javascript.svg",
+      "/three.svg",
+      "/gsap.svg",
+    ],
     link: "https://awsgulf.netlify.app/",
     githublink: "",
   },
@@ -164,10 +176,25 @@ export const projects = [
     id: 11,
     title: " 3d Portfolio ",
     des: "personal website version by react Js and Three js and Tailwind CSS.",
-    img: "/p9.png",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    img: "/Screenshot 2024-05-09 153412.png",
+    iconLists: ["/r.png", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "https://dobazworld.netlify.app/",
     githublink: "",
+  },
+  {
+    id: 12,
+    title: " flower MobbApp ",
+    des: "Angular ionic-app e-commerce flower app and js and pure CSS.",
+    img: "/mob.png",
+    iconLists: [
+      "/angular.svg",
+      "/tail.svg",
+      "/javascript.svg",
+      "/three.svg",
+      "/gsap.svg",
+    ],
+    link: "",
+    githublink: "https://github.com/Dobaaa/angular-ionic-flower-app",
   },
 ];
 
@@ -176,35 +203,35 @@ export const testimonials = [
     quote:
       "Ahmed did excellent work. He has good communication skills and very responsive. Would definitely hire him again.",
     name: "Murat Gultepe",
-    c_img: "/upwork.png",
+    cimg: "/upwork.png",
     title: "Director of Solar Company",
   },
   {
     quote:
       "Collaborating with Ahmed J was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project Ahmed's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Softa Solutions Company ",
-    c_img: "/softa.jpg",
+    cimg: "/softa.jpg",
     title: "CEO of Softa Solutions Company",
   },
   {
     quote:
       "Working with Ahmed  was a seamless experience. His attention to detail, creative approach, and ability to communicate effectively made the entire process smooth and enjoyable .Ahmed brings passion and technical brilliance to every project. Highly recommended for anyone aiming to build a modern, high-performing website.",
     name: "Muhammed Hussien ",
-    c_img: "/upwork.png",
+    cimg: "/upwork.png",
     title: "Head of Digital Strategy at Nova Solutions",
   },
   {
     quote:
       "Collaborating with Lina on our front-end revamp was a fantastic experience. Her mastery of modern frameworks, eye for UI/UX detail, and ability to translate designs into seamless, responsive interfaces truly elevated our product. If you're looking for a front-end developer who combines technical skill with design sensitivity, Lina is the one",
     name: "Omar El-Masry",
-    c_img: "/freelancer.jpeg",
+    cimg: "/freelancer.jpeg",
     title: "Lead Product Manager at BrightLoop Studios",
   },
   {
     quote:
       "I had the pleasure of partnering with Ahmed  on a recent project, and I was genuinely impressed by his commitment and technical know-how. Ahmed consistently delivered beyond expectations and brought fresh, strategic thinking to the table. He's an excellent choice if you're looking to enhance your online presence.",
     name: "Daniel Monroe",
-    c_img: "/freelancer.jpeg",
+    cimg: "/freelancer.jpeg",
     title: "Marketing Director at PixelWave Medias",
   },
 ];

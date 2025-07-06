@@ -14,6 +14,7 @@ export const InfiniteMovingCards = ({
     quote: string;
     name: string;
     title: string;
+    cimg: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -117,7 +118,7 @@ export const InfiniteMovingCards = ({
                 {/* add this div for the profile img */}
                 <div className="me-3">
                   <img
-                    src={item.c_img}
+                    src={item.cimg}
                     className=" w-[50px] h-[50px]"
                     alt="profile"
                   />
