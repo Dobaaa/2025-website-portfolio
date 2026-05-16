@@ -70,9 +70,11 @@
   * {
     @apply border-border !scroll-smooth;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   button {
     @apply active:outline-none;
   }
@@ -83,8 +85,12 @@
     @apply font-bold text-4xl md:text-5xl text-center;
   }
 }
+
 .doba-img {
-  background: url(../public/dobaz.png);
-  background-position: center;
-  height: 90vh;
+  background-image: url(/dobaz.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+  width: 100%;
+  min-height: 90vh;
 }
