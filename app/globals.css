@@ -67,12 +67,19 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: clip;
+  }
+
   * {
-    @apply border-border !scroll-smooth;
+    @apply border-border;
   }
 
   body {
     @apply bg-background text-foreground;
+    overflow-x: clip;
   }
 
   button {
@@ -89,8 +96,7 @@
 .doba-img {
   background-image: url(/dobaz.png);
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: contain;
-  width: 100%;
-  min-height: 90vh;
+  background-position: center;
+  background-size: auto min(90vh, 100%);
+  margin-top: 50px;
 }
