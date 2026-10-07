@@ -2,10 +2,25 @@
 
 import React from "react";
 
-import { companies, testimonials } from "@/data";
+import { companies, testimonials as staticTestimonials } from "@/data";
 import { InfiniteMovingCards } from "./ui/InfiniteCards";
+import { usePortfolio } from "./PortfolioProvider";
+import { mediaUrl } from "@/lib/portfolio";
 
 const Clients = () => {
+  const { status, data } = usePortfolio();
+  const testimonials =
+    status === "ready" && data
+      ? data.testimonials.map((item) => ({
+        quote: item.quote,
+        name: item.name,
+        title: item.title || "",
+          cimg: mediaUrl(item.avatar) || "/upwork.png",
+        }))
+      : status === "error"
+        ? staticTestimonials
+        : [];
+
   return (
     <section id="testimonials" className="py-20 scroll-mt-24">
       <h1 className="heading">
@@ -19,6 +34,7 @@ const Clients = () => {
           className="h-[50vh] md:h-[30rem] rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden"
         >
           <InfiniteMovingCards
+            key={testimonials.map((item) => item.name).join("-")}
             items={testimonials}
             direction="right"
             speed="slow"

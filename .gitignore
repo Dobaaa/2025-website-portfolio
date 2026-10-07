@@ -37,3 +37,13 @@ next-env.d.ts
 
 # Sentry Config File
 .sentryclirc
+
+# CMS
+/backend/vendor
+/backend/node_modules
+/backend/.env
+/dashboard/node_modules
+/backend/storage/*.key
+/backend/public/uploads/**
+!/backend/public/uploads/.gitignore
+

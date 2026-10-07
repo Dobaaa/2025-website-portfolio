@@ -111,9 +111,9 @@ export const projects = [
     id: 5,
     title: "WListDB Games Website ",
     des: "A full-stack web application for managing and visualizing quarterly sales data with interactive 3D charts. Built with React.js, Three.js, Laravel, and MySQL.",
-    img: "/p6.png",
+    img: "/w.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://wlistdb.com/en",
+    link: "https://wlistdb.com/",
     githublink: "",
   },
   {
@@ -136,16 +136,16 @@ export const projects = [
   },
   {
     id: 8,
-    title: "islam education",
+    title: "VIXI AI",
     des: "Developed a system for managing parties, concerts, and events developed the rental page and party features page and suppliers page andproducts page.",
-    img: "/islam.png",
+    img: "/pv.png",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
     link: "",
     githublink: "https://github.com/Dobaaa/Nextjs-ISLAM",
   },
   {
     id: 9,
-    title: "Ventage Website",
+    title: "Arabian Dexterity",
     des: "A full-stack web application for managing and visualizing quarterly sales data with interactive 3D charts. Built with React.js, Three.js, Laravel, and MySQL.",
     img: "/p8.png",
     iconLists: [
@@ -155,12 +155,12 @@ export const projects = [
       "/three.svg",
       "/gsap.svg",
     ],
-    link: "",
+    link: "https://dexterity.com.sa/",
     githublink: "",
   },
   {
     id: 10,
-    title: " awsgulf  company",
+    title: "Azix Solutions",
     des: "A full-stack web application for managing and visualizing quarterly sales data with interactive 3D charts. Built with React.js, Three.js, Laravel, and MySQL.",
     img: "/p9.png",
     iconLists: [
@@ -170,7 +170,7 @@ export const projects = [
       "/three.svg",
       "/gsap.svg",
     ],
-    link: "https://awsgulf.netlify.app/",
+    link: "https://www.azixsolutions.com/",
     githublink: "",
   },
   {
@@ -184,6 +184,15 @@ export const projects = [
   },
   {
     id: 12,
+    title: " EL ghanem ",
+    des: "personal website version by react Js and Three js and Tailwind CSS.",
+    img: "/Screenshot 2024-05-09 153412.png",
+    iconLists: ["/r.png", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    link: "https://ghanem.com.mx/",
+    githublink: "",
+  },
+  {
+    id: 13,
     title: " flower MobbApp ",
     des: "Angular ionic-app e-commerce flower app and js and pure CSS.",
     img: "/mob.png",

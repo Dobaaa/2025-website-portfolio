@@ -1,9 +1,28 @@
+"use client";
+
 import React from "react";
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
+import { usePortfolio } from "./PortfolioProvider";
+import { mediaUrl } from "@/lib/portfolio";
 
 const Experience = () => {
+  const { status, data } = usePortfolio();
+  const cards =
+    status === "ready" && data
+      ? data.experiences.map((item, index) => ({
+        id: item.id,
+        title: item.title,
+        desc: item.description || "",
+          thumbnail:
+            mediaUrl(item.thumbnail) ||
+            workExperience[index % workExperience.length].thumbnail,
+        }))
+      : status === "error"
+        ? workExperience
+        : [];
+
   return (
     <div className="py-20 w-full">
       <h1 className="heading">
@@ -11,7 +30,7 @@ const Experience = () => {
       </h1>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
-        {workExperience.map((card) => (
+        {cards.map((card) => (
           <Button
             key={card.id}
             //   random duration will be fun , I think , may be not

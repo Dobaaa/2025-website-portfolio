@@ -10,9 +10,11 @@ import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import { PortfolioProvider } from "@/components/PortfolioProvider";
 
 const Home = () => {
   return (
+    <PortfolioProvider>
     <main className="relative bg-black-100 flex flex-col w-full">
       <FloatingNav navItems={navItems} />
       <Hero />
@@ -25,6 +27,7 @@ const Home = () => {
         <Footer />
       </div>
     </main>
+    </PortfolioProvider>
   );
 };
 

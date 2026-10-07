@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: #000319;
+  color: #e2e8f0;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(7, 11, 36, 0.9);
+  padding: 0.75rem 1rem;
+  color: white;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #cbacf9;
+  outline-offset: 1px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.875rem;
+  color: #cbd5e1;
+}
