@@ -42,6 +42,7 @@ next-env.d.ts
 /backend/vendor
 /backend/node_modules
 /backend/.env
+/backend/.env.hostinger
 /dashboard/node_modules
 /backend/storage/*.key
 /backend/public/uploads/**

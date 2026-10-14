@@ -96,15 +96,18 @@ export default function ProjectModal({
           {project.access_type === "confidential" ? (
             <p className="leading-7 text-white-100">{project.confidential_message}</p>
           ) : (
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col gap-3">
               {project.live_url ? (
                 <a
                   href={project.live_url}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-purple"
+                  className="group flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-purple/40 bg-purple/10 px-4 py-3 transition hover:border-purple hover:bg-purple/20"
                 >
-                  Check Live Site
+                  <span className="font-semibold text-purple underline decoration-purple/70 underline-offset-4 group-hover:decoration-purple">
+                    Check Live Site
+                  </span>
+                  <span className="truncate text-sm text-white-100">{project.live_url}</span>
                 </a>
               ) : null}
               {project.github_url ? (
@@ -112,9 +115,12 @@ export default function ProjectModal({
                   href={project.github_url}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-purple"
+                  className="group flex flex-wrap items-center gap-x-3 gap-y-1 rounded-xl border border-white/15 px-4 py-3 transition hover:border-purple/60 hover:bg-white/5"
                 >
-                  Check GitHub Repo
+                  <span className="font-semibold text-purple underline decoration-purple/70 underline-offset-4 group-hover:decoration-purple">
+                    Check GitHub Repo
+                  </span>
+                  <span className="truncate text-sm text-white-100">{project.github_url}</span>
                 </a>
               ) : null}
               {!project.live_url && !project.github_url ? (
