@@ -21,6 +21,7 @@ const Hero = () => {
     "Hi! I'm Ahmed Jamal, a Software Engineer & Salesforce Developer based in Egypt.";
   const subtitleDelay = Math.max(heroTitle.split(" ").length - 1, 0) * 0.2 + 1;
   const cvUrl = mediaUrl(settings?.cv_path) || "/Ahmed Jamal Hussien.pdf";
+  const heroImage = mediaUrl(settings?.hero_image) || "/dobaz.png";
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -55,15 +56,16 @@ const Hero = () => {
         />
       </div>
 
-      <div
-        className="doba-img pointer-events-none absolute inset-0"
-        style={
-          settings?.hero_image
-            ? { backgroundImage: `url(${mediaUrl(settings.hero_image)})` }
-            : undefined
-        }
-        aria-hidden
-      />
+      {heroReady ? (
+        <motion.div
+          className="doba-img pointer-events-none absolute inset-0"
+          style={{ backgroundImage: `url(${heroImage})` }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          aria-hidden
+        />
+      ) : null}
 
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 pt-24">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">

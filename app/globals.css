@@ -94,7 +94,6 @@
 }
 
 .doba-img {
-  background-image: url(/dobaz.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto min(100vh, 70%);
