@@ -93,29 +93,29 @@
   }
 }
 
-.doba-img {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto min(100vh, 70%);
-  margin-top: 20px;
+.doba-photo {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  width: auto;
+  height: 66vh;
+  max-width: none;
+  object-fit: contain;
+  object-position: center top;
+  pointer-events: none;
   opacity: 0;
-  visibility: hidden;
-}
-
-.doba-img.is-visible {
-  opacity: 1;
-  visibility: visible;
   transition: opacity 0.9s ease-out;
 }
 
 @media (min-width: 768px) {
-  .doba-img {
-    background-size: auto 74vh;
+  .doba-photo {
+    height: 74vh;
   }
 }
 
 @media (min-width: 1024px) {
-  .doba-img {
-    background-size: auto min(90vh, 100%);
+  .doba-photo {
+    height: min(90vh, 100%);
   }
 }

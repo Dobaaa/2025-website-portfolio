@@ -25,26 +25,37 @@ const Hero = () => {
   const heroImage = heroReady
     ? mediaUrl(settings?.hero_image) || "/dobaz.png"
     : "";
-  const [imageReady, setImageReady] = useState(false);
+  const [photoSrc, setPhotoSrc] = useState("");
+  const [photoVisible, setPhotoVisible] = useState(false);
 
   useEffect(() => {
     if (!heroImage) {
-      setImageReady(false);
+      setPhotoSrc("");
+      setPhotoVisible(false);
       return;
     }
 
     let active = true;
+    let showFrame = 0;
     const image = new Image();
-    image.onload = () => {
-      if (active) setImageReady(true);
+    image.decoding = "async";
+    const reveal = () => {
+      if (!active) return;
+      setPhotoSrc(heroImage);
+      showFrame = window.requestAnimationFrame(() => {
+        showFrame = window.requestAnimationFrame(() => {
+          if (active) setPhotoVisible(true);
+        });
+      });
     };
-    image.onerror = () => {
-      if (active) setImageReady(true);
-    };
+    image.onload = reveal;
+    image.onerror = reveal;
     image.src = heroImage;
+    if (image.complete) reveal();
 
     return () => {
       active = false;
+      window.cancelAnimationFrame(showFrame);
     };
   }, [heroImage]);
 
@@ -81,13 +92,15 @@ const Hero = () => {
         />
       </div>
 
-      <div
-        className={`doba-img pointer-events-none absolute inset-0${
-          imageReady ? " is-visible" : ""
-        }`}
-        style={heroImage ? { backgroundImage: `url(${heroImage})` } : undefined}
-        aria-hidden
-      />
+      {photoSrc ? (
+        <img
+          src={photoSrc}
+          alt=""
+          aria-hidden
+          className="doba-photo"
+          style={{ opacity: photoVisible ? 1 : 0 }}
+        />
+      ) : null}
 
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 pt-24">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
