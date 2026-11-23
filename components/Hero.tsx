@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { FaLocationArrow } from "react-icons/fa6";
 
@@ -21,7 +22,31 @@ const Hero = () => {
     "Hi! I'm Ahmed Jamal, a Software Engineer & Salesforce Developer based in Egypt.";
   const subtitleDelay = Math.max(heroTitle.split(" ").length - 1, 0) * 0.2 + 1;
   const cvUrl = mediaUrl(settings?.cv_path) || "/Ahmed Jamal Hussien.pdf";
-  const heroImage = mediaUrl(settings?.hero_image) || "/dobaz.png";
+  const heroImage = heroReady
+    ? mediaUrl(settings?.hero_image) || "/dobaz.png"
+    : "";
+  const [imageReady, setImageReady] = useState(false);
+
+  useEffect(() => {
+    if (!heroImage) {
+      setImageReady(false);
+      return;
+    }
+
+    let active = true;
+    const image = new Image();
+    image.onload = () => {
+      if (active) setImageReady(true);
+    };
+    image.onerror = () => {
+      if (active) setImageReady(true);
+    };
+    image.src = heroImage;
+
+    return () => {
+      active = false;
+    };
+  }, [heroImage]);
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -56,16 +81,13 @@ const Hero = () => {
         />
       </div>
 
-      {heroReady ? (
-        <motion.div
-          className="doba-img pointer-events-none absolute inset-0"
-          style={{ backgroundImage: `url(${heroImage})` }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          aria-hidden
-        />
-      ) : null}
+      <div
+        className={`doba-img pointer-events-none absolute inset-0${
+          imageReady ? " is-visible" : ""
+        }`}
+        style={heroImage ? { backgroundImage: `url(${heroImage})` } : undefined}
+        aria-hidden
+      />
 
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 pt-24">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">

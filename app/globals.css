@@ -98,6 +98,14 @@
   background-position: center;
   background-size: auto min(100vh, 70%);
   margin-top: 20px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.doba-img.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.9s ease-out;
 }
 
 @media (min-width: 768px) {
